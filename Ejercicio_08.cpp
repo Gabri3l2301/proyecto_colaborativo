@@ -5,25 +5,32 @@
 using namespace std;
 
 int main(){
-	double CM, CH, PT, PH, PM;
-	
-	cout<<"ingrese el cantidad de mujeres"<<endl;
-	cin>>CM;
-	
-	cout<<"ingrese la cantidad de hombres"<<endl;
-	cin>>CH;
-	
-	PT = CM + CH;
-	
-	PM = (CM / PT) * 100;
-	PH = (CH / PT) * 100;
-	
-	cout<<"el porcentaje de mujeres en el grupo es de: "<<PM<<"%"<<endl;
-	cout<<"el porcentaje de hombres en el grupo es de: "<<PH<<"%"<<endl;
-	
-	return 0;
-		
-	
-	
-	
+    double PH, PM;
+    int CM, CH, CT;
+    
+    do {
+        cout << "Ingrese la cantidad de mujeres: " << endl;
+        cin >> CM;
+        if (CM <= 0) {
+            cout << "Dato no valido, intente de nuevo." << endl;
+        }
+    } while (CM <= 0);
+    
+    do {
+        cout << "Ingrese la cantidad de hombres: " << endl;
+        cin >> CH;
+        if (CH <= 0) {
+            cout << "Dato no valido, intente de nuevo." << endl;
+        }
+    } while (CH <= 0);
+    
+    CT = CM + CH;
+    
+    PM = (CM * 100.0) / CT;
+    PH = (CH * 100.0) / CT;
+    
+    cout << "El porcentaje de mujeres en el grupo es de: " << PM << "%" << endl;
+    cout << "El porcentaje de hombres en el grupo es de: " << PH << "%" << endl;
+    
+    return 0;
 }
