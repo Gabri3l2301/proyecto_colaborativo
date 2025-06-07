@@ -2,6 +2,18 @@
 #include <windows.h>
 using namespace std;
 
+
+float leerNota() {
+    float nota;
+    do {
+        cin >> nota;
+        if (nota < 0 || nota > 20) {
+            cout << "Respuesta invalida, la calificación debe estar entre 0 y 20. Intente de nuevo: " << endl;
+        }
+    } while (nota < 0 || nota > 20);
+    return nota;
+}
+
 //FUNCIÓN PARA CALCULAR LA NOTA FINAL
 
 float calcularNotaFinal(float conocimiento, float desempeno, float producto) {
