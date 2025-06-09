@@ -4,22 +4,19 @@ using namespace std;
 char numeroVocales(int num){
     switch (num){
     case 1:
-        return 'a';
+        return 'A';
         break;
     case 2:
-        return 'e';
+        return 'E';
         break;
     case 3:
-        return 'i';
+        return 'I';
         break;
     case 4:
-        return 'o';
+        return 'O';
         break;
     case 5:
-        return 'u';
-        break;
-    default:
-        return 'x';
+        return 'U';
         break;
     }
 }
@@ -27,16 +24,20 @@ char numeroVocales(int num){
 int main() {
     int num;
     char vocal;
-
-    cout << "Ingrese un numero del 1 al 5: ";
+    
+    cout<<"Bienvenido a mi programa"<<endl;
+     
+	cout << "Ingrese un numero del 1 al 5: ";
     cin >> num;
-
-    vocal = numeroVocales(num);
-    if (vocal != 'x') {
-        cout << "La vocal correspondiente es: " << vocal << endl;
+    
+	if (num<=5 && num>=1){
+	vocal = numeroVocales(num);
+	cout << "La vocal es: " << vocal << endl;
     } else {
         cout << "Error, numero no valido" << endl;
     }
+    
+    cout<< "Gracias por usar el programa " <<endl;
 
     return 0;
 }
