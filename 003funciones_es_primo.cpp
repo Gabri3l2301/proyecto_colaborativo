@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 
@@ -15,17 +16,22 @@ bool esPrimo(int num){
 }
 
 int main (){
+	SetConsoleOutputCP(CP_UTF8);
     int numero;
     bool resultado;
 
-    cout << "Ingrese el numero que desea saber si es primo: ";
+    cout<<"Biernvenido a mi programa" <<endl;
+    
+    cout << "Ingrese el número que desea saber si es primo: ";
     cin >> numero;
 
     resultado = esPrimo(numero);
     if (resultado){
-        cout << "\nEl numero que ingreso es primo" << endl;
+        cout << "El número que ingreso es primo" << endl;
     }else{
-        cout << "\nEl numero que ingreso no es primo" << endl;
+        cout << "El número que ingreso no es primo" << endl;
     }
+    
+    cout<< "Gracias por utilizar el programa "<<endl;
     return 0;
 }
